@@ -50,19 +50,19 @@ Attention: The table is SOOO large. It is recommended not to load it completely,
 ### 1. requirements.txt
 Before running code locally please install dependancies from requirements.txt
 
-### 2. app.py
+### 2. service/app.py
 This endpoint should return the top limit posts by number of likes. 
 More formally: you need to count the number of likes for each post, sort in descending order and display 
 the first limit of post records (their id, text and topic).
 
-### 3. schema.py
+### 3. service/schema.py
 This script helps with data validation based on BaseModel from pydantic
 
-### 4. model_training_CB.ipynb
-Training the model on Jupyter Hub and assessing its quality on the validation set
-
-### 5. catboost_model
+### 4. service/catboost_model
 Models are not retrained when using services. The code will import the already trained model and apply it
+
+### 5. research/model_training_CB.ipynb
+Training the model on Jupyter Hub and assessing its quality on the validation set
 
 ### 6. How to run the script
 
