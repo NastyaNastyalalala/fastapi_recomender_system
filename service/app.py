@@ -3,7 +3,7 @@ import pandas as pd
 from typing import List
 from catboost import CatBoostClassifier
 from fastapi import FastAPI
-from schema import PostGet
+from service.schema import PostGet
 from datetime import datetime
 from sqlalchemy import create_engine
 from loguru import logger
@@ -72,7 +72,7 @@ def load_features():
 
 def load_models():
     # Catboost loading
-    model_path = get_model_path("./catboost_model")
+    model_path = get_model_path("catboost_model")
     loaded_model = CatBoostClassifier()
     loaded_model.load_model(model_path)
     return loaded_model

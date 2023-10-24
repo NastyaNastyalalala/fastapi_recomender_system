@@ -1,4 +1,4 @@
-import app
+from service import app
 from fastapi.testclient import TestClient
 from datetime import datetime
 
